@@ -1,0 +1,452 @@
+%% LyX 2.1.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,american, abstracton, headsepline,twoside=semi]{scrreprt}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=3.5cm}
+\pagestyle{headings}
+
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \fancyhead{}
+% \fancyhead[LE]{\leftmark}
+% \fancyhead[RO]{\rightmark}
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{color}
+\usepackage{babel}
+\usepackage{array}
+\usepackage{varioref}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{setspace}
+\usepackage{nomencl}
+\usepackage{epigraph}
+\usepackage{pdfpages}
+% \setlength{\epigraphwidth}{.50\textwidth}
+
+\usepackage{bm}
+\usepackage{csquotes}
+\usepackage[flushleft]{threeparttable}
+\usepackage{datatool}
+\usepackage[acronym]{glossaries}
+\usepackage{cancel}
+\usepackage{booktabs}
+\usepackage[format=plain,labelfont=bf,font=small]{caption}
+\usepackage{threeparttable}
+\usepackage{silence}
+%%
+\usepackage[round]{natbib}
+\usepackage{bibentry}
+\nobibliography*
+% BIBLIO FILE ~~~~~~~~~~~~~~~~~~~~~
+%\usepackage[authordate,useprefix=true,backend=biber]{biblatex-chicago}
+%\addbibresource{Bibliography/PhDThesis.bib}
+
+% References (Eq, Ch, ...) with parenthesis
+
+\newcommand{\aap}{{Astron.~Astrophys.}}
+\newcommand{\araa}{{Annu.~Rev.~Astron.~Astrophys.}}
+\newcommand{\apj}{{The~Astrophysical~Journal}}
+\newcommand{\apjl}{{The~Astrophysical~Journal~Letters}}
+\newcommand{\aaps}{{Astron.~Astrophys.~Supp.~Series}}
+\newcommand{\pasj}{{Publ.~Astron.~Soc.~Japan}}
+\newcommand{\mnras}{{MNRAS}}
+\newcommand{\nat}{{Nature}}
+\newcommand{\jcap}{{JCAP}}
+\newcommand{\aj}{{Astronomic. J.}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\cov}{\text{Cov}}
+\newcommand{\Nsim}{N_{\text{sim}}}
+\newcommand{\new}[1]{{\textcolor{blue}{\bf #1}}}
+\newcommand{\nver}{\hat{\mathbf{n}}}
+\newcommand{\kver}{\hat{\mathbf{k}}}
+\newcommand{\kvec}{\mathbf{k}}
+\newcommand{\wig}[6]{\left(\begin{array}{clcr}
+#1 & #2 & #3\\
+#4 & #5 & #6 \end{array}\right)}
+\newcommand{\gaunt}[6]{\mathcal{G}^{#1\, #2 \,#3}_{#4 \,#5\, #6}}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+\renewcommand{\rm}{\mathrm}
+%\renewcommand{\bf}{\textbf}
+
+% ACRONYMS
+\makeglossaries
+ 
+\newacronym{LCDM}{$\Lambda$CDM}{$\Lambda$ Cold Dark Matter}
+\newacronym{CMB}{CMB}{Cosmic Microwave Background}
+\newacronym{CP}{CP}{Cosmological Principle}
+\newacronym{EFE}{EFE}{Einstein's Field Equations}
+\newacronym{SET}{SET}{Stress Energy Tensor}
+\newacronym{LSS}{LSS}{Large Scale Structure}
+\newacronym{DM}{DM}{Dark Matter}
+\newacronym{DE}{DE}{Dark Energy}
+\newacronym{MG}{MG}{Modified Gravity}
+\newacronym{FLRW}{FLRW}{Friedmann-Lema\^itre-Robertson-Walker}
+\newacronym{GR}{GR}{General Relativity}
+\newacronym{BAO}{BAO}{Baryonic Acoustic Oscillations}
+\newacronym{HBB}{HBB}{Hot Big Bang}
+\newacronym{EoS}{EoS}{equation of state}
+\newacronym{DSFG}{DSFG}{dusty star forming galaxies}
+\newacronym{iSW}{iSW}{integrated Sachs-Wolfe effect}
+\newacronym{LOS}{LOS}{line-of-sight}
+\newacronym{WL}{WL}{Weak Lensing}
+\newacronym{SED}{SED}{Spectral Energy Distribution}
+\newacronym{SZ}{SZ}{Sunyaev-Zel'dovich effect}
+\newacronym{RS}{RS}{Rees-Sciama effect}
+\newacronym{CIB}{CIB}{Cosmic Infrared Background}
+\newacronym{IR}{IR}{Infrared}
+\newacronym{FIR}{FIR}{Far-infrared}
+\newacronym{GRF}{GRF}{Gaussian random field}
+\newacronym{2PCF}{2PCF}{2-point correlation function}
+\newacronym{PCL}{PCL}{Pseudo-$C_{\ell}$ method}
+\newacronym{MC}{MC}{Monte Carlo}
+
+\newacronym{WMAP}{WMAP}{Wilkinson Microwave Anisotropy Probe}
+\newacronym{PIXIE}{PIXIE}{Primordial Inflation Explorer}
+\newacronym{ACT}{ACT}{Atacama Cosmology Telescope}
+\newacronym{SPT}{SPT}{South Pole Telescope}
+\newacronym{DESI}{DESI}{Dark Energy Spectroscopic Instrument}
+\newacronym{LSST}{LSST}{Large Synoptic Survey Telescope}
+\newacronym{WFIRST}{WFIRST}{Wide Field Infrared Survey Telescope}
+\newacronym{COBE}{COBE}{COsmic Background Explorer}
+\newacronym{FIRAS}{FIRAS}{Far-InfraRed Absolute Spectrophotometer}
+\newacronym{COrE}{CORE}{Cosmic Origin Explorer}
+\newacronym{ACBAR}{ACBAR}{Arcminute Cosmology Bolometer Array Receiver}
+\newacronym{CFHT}{CFHT}{Canada-France-Hawai Telescope}
+% the following is useful when we have the old nomencl.sty package
+\providecommand{\printnomenclature}{\printglossary}
+\providecommand{\makenomenclature}{\makeglossary}
+\makenomenclature
+\setstretch{1.2}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{ \\ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{textcomp,units}
+
+\usepackage{caption}
+\captionsetup[table]{skip=10pt}
+
+\makeatletter
+ \renewcommand*{\chapterformat}{
+   \begingroup
+     \setlength{\unitlength}{1mm}
+     \begin{picture}(10,10)(0,5) 
+       \setlength{\fboxsep}{0pt}
+       \put(10,15){\line(1,0){\dimexpr 
+           \textwidth-20\unitlength\relax\@gobble}}
+       \put(0,0){\makebox(10,20)[r]{
+           \fontsize{28\unitlength}{28\unitlength}\selectfont\thechapter 
+           \kern-.05em
+         }}
+       \put(10,15){\makebox(\dimexpr 
+           \textwidth-20\unitlength\relax\@gobble,\ht\strutbox\@gobble)[l]{
+             \ \normalsize\color{black}\chapapp~\thechapter\autodot 
+           }}
+     \end{picture} 
+   \endgroup 
+}
+
+\usepackage{ %a4wide,
+            ellipsis, fixltx2e, mparhack,
+            booktabs, longtable  
+}  
+
+\usepackage[automark]{scrpage2}
+\clearscrheadfoot
+\ohead{\\\headmark}
+\ihead{\includegraphics[scale=0.15]{logo.jpg}}
+\ofoot[\pagemark]{\pagemark}
+
+\renewenvironment{abstract}{
+    \@beginparpenalty\@lowpenalty
+      \begin{center}
+        \normalfont\sectfont\nobreak\abstractname
+        \@endparpenalty\@M
+      \end{center}
+}{
+    \par
+}
+
+\usepackage{microtype}
+
+\usepackage{ifpdf} % part of the hyperref bundle
+\ifpdf % if pdflatex is used
+
+%set fonts for nicer pdf view
+ \IfFileExists{lmodern.sty}{\usepackage{lmodern}}
+  {\usepackage[scaled=0.92]{helvet}
+    \usepackage{mathptmx}
+    \usepackage{courier} }
+\fi
+
+ \pagenumbering{roman}
+ \let\myTOC\tableofcontents
+ \renewcommand\tableofcontents{
+   \myTOC
+   \clearpage
+   \pagenumbering{arabic}}
+
+
+\definecolor{oucrimsonred}{rgb}{0.6, 0.0, 0.0}
+\definecolor{persianblue}{rgb}{0.11, 0.22, 0.73}
+\definecolor{cobaltblue}{rgb}{0.11, 0.22, 0.53}
+\definecolor{forestgreen}{rgb}{0.13,0.35,0.13}
+\definecolor{lightgray}{rgb}{0.8,0.8,0.8}
+\definecolor{darkgray}{rgb}{0.23,0.23,0.23}
+
+ \usepackage[colorlinks=true, bookmarks, bookmarksnumbered, bookmarksopen, bookmarksopenlevel=1,
+  linkcolor=black, citecolor=persianblue, urlcolor=forestgreen, filecolor=forestgreen,
+  pdfpagelayout=OneColumn, pdfnewwindow=true,
+  pdfstartview=XYZ, plainpages=false, pdfpagelabels,
+  pdfauthor={LyX Team}, pdftex,
+  pdftitle={LyX's Figure, Table, Floats, Notes, and Boxes manual},
+  pdfsubject={LyX-documentation about figures, tables, floats, notes, and boxes},
+  pdfkeywords={LyX, Tables, Figures, Floats, Boxes, Notes}]{hyperref}
+
+\newcommand{\@ldtable}{}
+\let\@ldtable\table
+\renewcommand{\table}{ 
+                 \setlength{\@tempdima}{\abovecaptionskip} 
+                 \setlength{\abovecaptionskip}{\belowcaptionskip} 
+                 \setlength{\belowcaptionskip}{\@tempdima} 
+                 \@ldtable}
+
+\renewcommand{\nomname}{Glossary}
+
+\AtBeginDocument{
+  \def\labelitemiii{\(\circ\)}
+}
+
+\makeatother
+
+\usepackage{listings}
+\addto\captionsamerican{\renewcommand{\lstlistingname}{Listing}}
+\addto\captionsngerman{\renewcommand{\lstlistingname}{Listing}}
+\renewcommand{\lstlistingname}{Listing}
+
+\usepackage{lmodern}
+
+
+% \begin{document}
+% \noindent \titlepage
+
+%  \begin{center}
+% \begin{tabular}{c}
+% {\Large{Scuola Internazionale Superiore di Studi Avanzati}}
+% \end{tabular}
+% \par\end{center}
+
+% \noindent \begin{center}
+% \textbf{\Large{} Area of Physics} \\
+% \textbf{\Large{}Ph.D. in Astrophysics}
+% \par\end{center}{\Large \par}
+
+% \noindent \vspace{1.5cm}
+
+% \begin{center}
+% \includegraphics[scale=0.4]{Logo_SISSA.pdf}
+% \end{center}
+
+% \noindent \vspace{.cm}
+
+%  \begin{center}
+% {\Huge{Cosmic Microwave Background and Large Scale Structure: Cross-Correlation as seen from \textit{Herschel} and \textit{Planck} satellites}\par}
+% \par\end{center}{\Large \par}
+
+% \noindent \begin{center}
+% {\Large{}\vspace{1cm}
+% }
+% \par\end{center}{\Large \par}
+
+% \begin{tabular}{cc}
+% \hspace{1.5cm} \textbf{Candidate} \hspace{3.cm} &  \hspace{1.5cm} \textbf{Supervisor} \\
+% \hspace{1.5cm} \Large{Federico Bianchini} \hspace{3.cm} &  \hspace{1.5cm} \Large{Carlo Baccigalupi}\\
+% %\hspace{2cm}\\
+% \hspace{1.5cm} \Large{                  } \hspace{3.cm} &  \hspace{1.5cm} \Large{Pawel Bielewicz}\\
+% \hspace{1.5cm} \Large{                  } \hspace{3.cm} &  \hspace{1.5cm} \Large{Andrea Lapi}
+% \end{tabular}
+
+% %\noindent \vspace{1.5cm}
+
+% \begin{center}
+% Thesis submitted in partial fulfillment of the requirements \\ for the degree of Doctor Philosophiae Academic Year 2015/2016
+% \end{center}
+
+\begin{document}
+\begin{titlepage}
+\includepdf[pages={1}]{Cover_SISSA_Fede.pdf}
+\end{titlepage}
+
+\noindent \begin{center}
+\newpage{}
+\par\end{center}
+
+~
+\noindent \begin{center}
+\textbf{\huge{}Declaration of Work}
+\par\end{center}{\huge \par}
+The research presented in this thesis was carried out in the Astrophysics Sector of the International School for Advanced Studies (SISSA/ISAS), Trieste, between November 2012 and August 2016. This 
+thesis is the result of my own work except where explicit reference to the results of others has been made. \\
+
+The content of this thesis is based on the following published or submitted papers:
+\begin{itemize}
+\item{\textbf{Chapter 3}: \bibentry{Bianchini2015}}
+\item{\textbf{Chapter 4}: \bibentry{Bianchini2016a}}
+\item{\textbf{Chapter 5}: \bibentry{Bianchini2016c}}
+\item{\textbf{Chapter 6}: \bibentry{Bianchini2016b}}
+\end{itemize}
+
+\newpage{}
+
+%\noindent \begin{center}
+%\textbf{\huge{}Abstract}
+%\par\end{center}{\huge \par}
+%My work was about
+%
+%\newpage{}
+
+\tableofcontents{}
+
+\newpage{}
+
+\pagenumbering{roman}
+\setcounter{page}{7}
+
+% \listoffigures
+
+% \newpage{}
+
+% \listoftables
+
+\newpage{}
+
+\printglossary[type=acronym,nonumberlist]
+
+\newpage{}
+
+\thispagestyle{empty}
+\setlength{\epigraphwidth}{.5\textwidth}
+\begin{epigraphs}
+\qitem{\textit{Sometimes science is a lot more art, than science. A lot of people don't get that.}}%
+ {---Rick Sanchez, \textsc{Rick \& Morty}}
+ \end{epigraphs}
+
+\cleardoublepage
+
+\newpage{}
+
+\thispagestyle{empty}
+\setlength{\epigraphwidth}{.3\textwidth}
+\begin{epigraphs}
+\qitem{\textit{Alla mia famiglia}}%
+ 
+ \end{epigraphs}
+
+\cleardoublepage
+
+\newpage{}
+
+\pagenumbering{arabic}
+
+\newpage{}
+
+\chapter{Introduction}
+\input{Introduction/Intro.tex}
+% \addcontentsline{toc}{chapter}{Introduction}
+% \chaptermark{Introduction}
+
+\chapter{Cosmology and gravitational lensing}
+\label{ch:cosmo}
+\input{Chapter1/Chapter1.tex}
+
+\chapter{CMB-LSS cross-correlation: statistics and datasets}
+\label{ch:statsdata}
+\input{Chapter2/Chapter2}
+
+\chapter{Cross-correlation in the high-$z$ sky as seen by \textit{Planck} and \textit{Herschel}}
+\label{ch:xc1}
+\input{Chapter3/Chapter3.tex}
+
+\chapter{Toward a tomographic analysis of the Planck-Herschel cross-correlation}
+\label{ch:xc2}
+\input{Chapter4/Chapter4.tex}
+
+\chapter{Needlet estimation for CMB-LSS cross-correlation}
+\label{ch:cmbneed}
+\input{Chapter5/Chapter5.tex}
+
+\chapter{Kinetic Sunyaev-Zel'dovich effect in modified gravity}
+\label{ch:ksz}
+\input{Chapter6/Chapter6.tex}
+
+\chapter*{\begin{center}{Conclusions and future prospects}\end{center}}
+\addcontentsline{toc}{chapter}{Conclusions and future prospects}
+\chaptermark{Conclusions and future prospects}
+
+\setlength{\epigraphwidth}{.5\textwidth}
+\begin{epigraphs}
+\qitem{\textit{There ain't no dark till something shines\\
+I'm bound to leave this dark behind}}%
+ {---Rex's Blues, \textsc{Townes Van Zandt}}
+ \end{epigraphs}
+
+These are exciting times to be a cosmologist and despite the Universe \textit{dark sides}, the future of cosmology looks bright. While \textit{Planck} contributed to consolidate the standard \gls{LCDM} model, perhaps having the final word on the \gls{CMB} temperature anisotropies,\footnote{Bearing in mind that high-resolution \gls{CMB} experiments can, and will, say a lot about the small scales temperature anisotropies induced by secondary effects.} a lot of work remains to be done in order to address the numerous questions still open. The next cosmological frontiers include, among the others, the measurement of the \gls{CMB} polarization (especially the $B$-modes) and lensing, as well as the extensive mapping of the \gls{LSS} at different wavelengths out to high redshifts. The large volume of data gathered by the upcoming  \gls{CMB} and \gls{LSS} surveys will pose new challenges concerning the best approach to extract cosmological and astrophysical information, how to construct optimal estimators, and how to combine (cross-correlate) different probes. In fact, the main motivations behind this thesis were to move the first steps in this direction.
+
+In this thesis we have studied how to extract cosmological and astrophysical information from the combination of the \gls{CMB} and \gls{LSS} datasets. Specifically, we have exploited the synergy between the \textit{Planck} and \textit{Herschel} satellites and measured for the first time the cross-correlation signal between the \gls{CMB} lensing and the angular positions of the sub-mm galaxies detected in the context of the H-ATLAS survey residing at $z\gtrsim 1.5$ - where the \gls{CMB} lensing efficiency is at its best - pushing the analysis to a redshift window higher compared to previous studies. Despite the small sky fraction ($f_{\rm{sky}} \simeq 0.013$) and the high \gls{CMB} lensing reconstruction noise level, our analysis yielded a detection around $\approx10\sigma$ (depending on the \textit{Planck} release). This result, validated with a series of null tests and stability checks, confirms that \gls{DSFG} are excellent tracers of the matter distribution and are found to reside in halos of effective masses around $M_{\rm H} \simeq 10^{12.9}$ at $z \simeq 2$, supporting our understanding of the  structure formation process. 
+Combining the \gls{CMB} lensing-galaxy density cross-spectrum, $C_{\ell}^{\kappa g}$, with galaxy clustering measurements, $C_{\ell}^{gg}$, we have found a cross-correlation amplitude somewhat higher than expected - at the 2.5-3.5$\sigma$ level - for the assumed \gls{LCDM} cosmology and galaxy redshift distribution. This indicates a possible residual contamination, an incorrect modeling of the signal, or new physics at play.
+Much effort has been spent also on the astrophysics side for the characterization of the sources in terms of their redshift distribution, a sensitive ingredient of the analysis. As a first step towards a full 3D analysis over the lightcone, we have split the main galaxy samples in two redshift bins and performed a 2D tomographic analysis, reconstructing the galaxy bias evolution over cosmic time. 
+
+Motivated by the upcoming experimental efforts, we have also examined the spectral estimation problem in the needlet domain and compared it with the standard harmonic approach, focusing on the masking-induced biasing effects. Even though theoretically equivalent, needlets can benefit from their dual localization in both real and harmonic space and perform better than usual \gls{PCL} methods. To overcome limitations encountered in the case of heavy masking, as the case of the \textit{Planck}-\textit{Herschel} cross-correlation, we have developed a novel \texttt{MASTER}-like needlet technique.
+
+Finally, we have considered the perspective of theory, by looking at modifications of gravity, but studying manifestations in a different effect, the kSZ. We have focused on a specific class of $f(R)$ models - the Hu \& Sawicki one - and identified imprints of the modifications to gravity, through in enhancement of the effect itself with respect to a \gls{LCDM} case. Nevertheless, we also showed how the same phenomenology could arise fom other effects such as details of reionization, and impact of gastrophysics in modeling of the signal. 
+
+\myparagraph{Future prospects}
+As mentioned in the introduction, cosmology has entered the \textit{precision era} and the avalanche of data that will be gathered by the community in the upcoming years will propel it to \textit{accuracy era}: this will only be possible by developing suitable statistical techniques and this thesis walks in this direction. At the time of writing this thesis, \gls{CMB} lensing has been detected at a significance of $\approx 40\sigma$ in the \textit{Planck} data and have become a standard probe in the cosmologist's toolbox, while the cross-correlation science is rapidly moving away from the detection regime. 
+As we have have learnt, also from our experience, cosmological and astrophysical datasets are now increasingly dominated by systematic, rather that statistical uncertainties.
+
+The work presented here can be extended in different ways. 
+The most puzzling result regarding the cross-correlation analysis is perhaps the observed tension between the cross- and auto-power  spectrum, resulting in an amplitude $A>1$, which should be further investigated. As one of the main limitations of the analysis is the resolution of the \gls{CMB} lensing maps, a first step would be to exploit low-noise \gls{CMB} datasets to augment the S/N. Due to the partial overlap with the H-ATLAS survey, the POLARBEAR experiment together the Simons Array, its planned progression, would represent a major step forward in the cross-correlation analysis, enabling a more detailed investigation of the signal. \\
+As we have seen, astrophysical modeling is fundamental in order to interpret the observed signal, meaning that we also need accurate astrophysics if we want correct cosmology measurements. On the galaxies side, the H-ATLAS survey is complete but there is room for improvement on the estimation of the galaxies redshift distribution. In this direction, I started developing a SED template fitting tool based on Bayesian formalism that allows to recover the full photo-$z$ information of the considered galaxy sample.\\
+At the same time, it is essential to complement these findings with appropriate simulations, by 
+exploiting accurate \gls{CMB} maps lensed with ray-tracing techniques and realistic galaxy mock catalogues based on N-body simulations. The simulative pipeline will help to optimize cross-correlation estimators, to better understand the relations between astrophysical processes and cosmology, and to provide insights on the characterization of future surveys.\\
+Finally, needlet cross-spectrum estimators will be applied to the same set of simulations and above all to real datasets, in preparation of a full-3D analysis. \\
+To conclude, the work presented in this thesis represents an attempt to exploit observations of the \gls{CMB} secondary anisotropies and \gls{LSS} to sharpen our understanding of the dark Universe. Much work needs to be done in order to consistently include cross-correlation measurements in the usual cosmological analysis pipelines and to understand how to fully exploit their constraining power.
+
+
+
+%\noindent \begin{center}
+\newpage{}
+%\par\end{center}
+
+~
+
+%\noindent \begin{center}
+%\Huge{Acknowledgements}
+%\par\end{center}{\huge \par}
+%Thanks to everybody!
+
+%\addcontentsline{toc}{chapter}{\bibname}\nocite{*}
+%\bibliographystyle{Bibliography/JHEP}
+%\bibliographystyle{apalike}
+\bibliographystyle{yahapj}
+\bibliography{Bibliography/PhDThesis.bib}
+%\printbibliography
+
+\end{document}
